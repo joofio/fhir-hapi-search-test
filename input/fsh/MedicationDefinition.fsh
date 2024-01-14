@@ -11,8 +11,7 @@ Usage: #example
 * domain = http://hl7.org/fhir/medicinal-product-domain#Human
 
 * classification = $WHOAnatomicalTherapeuticChemicalATCClassificationSystem#B01AF02
-//* attachedDocument = Reference(DocumentReference/example)
-//* masterFile = Reference(DocumentReference/example)
+* masterFile = Reference(Docexample)
 * name.productName = "Equilidem 2.5 mg film-coated tablets"
 * name.part[0].part = "Equilidem"
 * name.part[=].type.coding.code = #INV
@@ -27,3 +26,25 @@ Usage: #example
 * operation.effectiveDate.start = "2013-03-15"
 * type = http://hl7.org/fhir/medicinal-product-type#MedicinalProduct
 * status = http://hl7.org/fhir/publication-status#active
+* characteristic.type = http://example.org#color
+* characteristic.valueCodeableConcept = http://example.org#white
+* contact.contact = Reference(Orgexample)
+* ingredient = http://example.org#paracetamol
+
+
+Instance: Docexample
+InstanceOf: DocumentReference
+Usage: #example
+
+* status =  http://hl7.org/fhir/document-reference-status#current
+* content.attachment.language = urn:ietf:bcp:47#en
+
+
+
+Instance: Orgexample
+InstanceOf: Organization
+Usage: #example
+
+
+* active = true
+* name = "stuff"

@@ -92,6 +92,51 @@ class ServerTest(unittest.TestCase):
         self.assertEqual(total, 1)
         # More assertions here based on what you're testing
 
+    def test_search_char_type(self):
+        # Test some functionality after setup
+        response = requests.get(
+            self.upload_url + "/MedicinalProductDefinition?characteristic-type=color"
+        )
+        total = response.json()["total"]
+        self.assertEqual(total, 1)
+        # More assertions here based on what you're testing
+
+    def test_search_char_value(self):
+        # Test some functionality after setup
+        response = requests.get(
+            self.upload_url + "/MedicinalProductDefinition?characteristic=white"
+        )
+        total = response.json()["total"]
+        self.assertEqual(total, 1)
+        # More assertions here based on what you're testing
+
+    def test_search_doc_ref(self):
+        # Test some functionality after setup
+        response = requests.get(
+            self.upload_url + "/MedicinalProductDefinition?master-file=Docexample"
+        )
+        total = response.json()["total"]
+        self.assertEqual(total, 1)
+        # More assertions here based on what you're testing
+
+    def test_search_contact(self):
+        # Test some functionality after setup
+        response = requests.get(
+            self.upload_url + "/MedicinalProductDefinition?contact=Orgexample"
+        )
+        total = response.json()["total"]
+        self.assertEqual(total, 1)
+        # More assertions here based on what you're testing
+
+    def test_search_ingredient(self):
+        # Test some functionality after setup
+        response = requests.get(
+            self.upload_url + "/MedicinalProductDefinition?ingredient=paracetamol"
+        )
+        total = response.json()["total"]
+        self.assertEqual(total, 1)
+        # More assertions here based on what you're testing
+
 
 if __name__ == "__main__":
     unittest.main()
