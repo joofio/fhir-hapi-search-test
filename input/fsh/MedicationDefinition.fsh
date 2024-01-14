@@ -25,3 +25,5 @@ Usage: #example
 * name.usage.language = urn:ietf:bcp:47#en
 * operation.type.concept = $manufacturingOperationType#Batchrelease
 * operation.effectiveDate.start = "2013-03-15"
+* type = http://hl7.org/fhir/medicinal-product-type#MedicinalProduct
+* status = http://hl7.org/fhir/publication-status#active
