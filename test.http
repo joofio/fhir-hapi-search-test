@@ -3,3 +3,34 @@ PUT http://localhost:8181/fhir/MedicinalProductDefinition/example
 Content-Type: application/json
 
 < fsh-generated/resources/medicinalProductDefinition-example.json
+
+
+### put file
+GET http://localhost:8181/fhir/MedicinalProductDefinition/
+
+### deleete file
+DELETE  http://localhost:8181/fhir/MedicinalProductDefinition/example
+
+### put file
+PUT http://localhost:8181/fhir/NutritionProduct/NPexample
+Content-Type: application/json
+
+< fsh-generated/resources/NutritionProduct-NPexample.json
+
+### put file
+PUT http://localhost:8181/fhir/DeviceDefinition/syringeDevice
+Content-Type: application/json
+
+< fsh-generated/resources/DeviceDefinition-syringeDevice.json
+
+### put file
+GET http://localhost:8181/fhir/ManufacturedItemDefinition/
+
+### deleete file
+DELETE  http://localhost:8181/fhir/ManufacturedItemDefinition/MIDexample
+
+
+### deleete file
+GET  http://localhost:8181/fhir/PackagedProductDefinition?manufactured-item=MIDexample
+
+
