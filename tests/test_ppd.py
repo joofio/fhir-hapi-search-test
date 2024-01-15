@@ -19,16 +19,17 @@ upload_url = "http://localhost:8181/fhir"
 def test_search_ppd_biological(upload_file_setup):
     # Test some functionality after setup
     response = requests.get(
-        upload_url + "/PackagedProductDefinition?biological=NPexample"
+        upload_url + "/PackagedProductDefinition?biological=allogeneicHCT"
     )
     total = response.json()["total"]
+    print(response.json()["entry"][0])
     assert total == 1
 
 
 def test_search_ppd_nutrition(upload_file_setup):
     # Test some functionality after setup
     response = requests.get(
-        upload_url + "/PackagedProductDefinition?nutrition=allogeneicHCT"
+        upload_url + "/PackagedProductDefinition?nutrition=NPexample"
     )
     total = response.json()["total"]
     assert total == 1

@@ -1,2 +1,4 @@
-html-testRunner
+pytest 
+pytest-html
+pytest-cov
 requests
