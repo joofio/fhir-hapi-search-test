@@ -51,3 +51,12 @@ def test_search_ppd_mid(upload_file_setup):
     )
     total = response.json()["total"]
     assert total == 1
+
+
+def test_search_ppd_mid_com(upload_file_setup):
+    # Test some functionality after setup
+    response = requests.get(
+        upload_url + "/PackagedProductDefinition?manufactured-item.identifier={mid}"
+    )
+    total = response.json()["total"]
+    assert total == 1

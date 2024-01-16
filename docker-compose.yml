@@ -16,7 +16,7 @@ services:
       - hapi.fhir.fhir_version=R5
       - hapi.fhir.cr_enabled=true
       - hapi.fhir.enable_repository_validating_interceptor=false
-      - hapi.fhir.auto_create_placeholder_reference_targets=true
+
 
 
       - spring.jpa.properties.hibernate.format_sql=false
